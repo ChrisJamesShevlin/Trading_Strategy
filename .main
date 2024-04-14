@@ -1,0 +1,30 @@
+Strategy 1: Put Credit Spread (Low Volatility)
+---------------------------------------------
+Condition: VIX < 1.5 Standard Deviations
+Option Type: Put Credit Spread
+Entry Conditions:
+  - Sell a put option with a delta of -0.16
+  - Buy a put option with a delta of -0.13
+  - Enter when stochastic indicator is oversold and the daily candle is down
+Expiry: Close to 45 DTE
+Management:
+  - Hold if > 21 DTE
+  - Take profit at 50% max profit
+  - Take a loss at 200% max loss
+  - If < 21 DTE and price above breakeven but showing a loss, hold
+  - If < 21 DTE and price below breakeven, close position
+
+Strategy 2: Iron Condor (High Volatility)
+-----------------------------------------
+Condition: VIX > 1.5 Standard Deviations
+Option Type: Iron Condor
+Entry Conditions:
+  - Sell a call and a put option both with a delta of -0.16
+  - Buy a call and a put option both with a delta of -0.10
+  - Enter when stochastic indicator is oversold and the daily candle is down
+Expiry: Close to 45 DTE
+Management:
+  - Hold if > 21 DTE
+  - Take profit at 25% max profit
+  - Take a loss at 100% max loss
+  - Close position if < 21 DTE regardless of profit/loss situation
