@@ -26,5 +26,4 @@ Expiry: Close to 45 DTE
 Management:
   - Hold if > 21 DTE
   - Take profit at 25% max profit
-  - Take a loss at 100% max loss
   - Close position if < 21 DTE regardless of profit/loss situation
