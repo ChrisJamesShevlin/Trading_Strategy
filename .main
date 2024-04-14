@@ -11,8 +11,8 @@ Management:
   - Hold if > 21 DTE
   - Take profit at 50% max profit
   - Take a loss at 200% max loss
-  - If < 21 DTE and price above breakeven but showing a loss, hold
-  - If < 21 DTE and price below breakeven, close position
+  - If < 21 DTE and price above breakeven but showing a loss then continue to hold
+  - If < 21 DTE and price below breakeven then close position
 
 Strategy 2: Iron Condor (High Volatility)
 -----------------------------------------
