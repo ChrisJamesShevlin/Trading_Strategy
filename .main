@@ -10,7 +10,7 @@ Expiry: Close to 45 DTE
 Management:
   - Hold if > 21 DTE
   - Take profit at 50% max profit
-  - If < 21 DTE and price above breakeven but showing a loss then continue to hold
+  - If < 21 DTE and price above breakeven then continue to hold
   - If < 21 DTE and price below breakeven then close position
 
 Strategy 2: Iron Condor (High Volatility)
