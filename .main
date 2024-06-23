@@ -1,11 +1,11 @@
-Strategy 1: Put Credit Spread (Low Volatility)
+Strategy 1: Broken Wing Butterfly (Low Volatility)
 ---------------------------------------------
 Condition: VIX < 1.5 Standard Deviations
-Option Type: Put Credit Spread - 40% BP
+Option Type: Broken Wing Butterfly - 40% BP
 Entry Conditions:
   - Sell a put option with a delta of -0.20
   - Buy a put option with a delta of -0.13
-  - Enter when *** indicator is *** and the daily candle is down
+  - Buy a put option (x) points higher than the sell puts to achieve credit if ETF continues to rise
 Expiry: Close to 45 DTE
 Management:
   - Hold if > 21 DTE
