@@ -1,7 +1,7 @@
 Strategy 1: Put Credit Spread (Low Volatility)
 ---------------------------------------------
 Condition: VIX < 1.5 Standard Deviations
-Option Type: Broken Wing Butterfly - 40% BP
+Option Type: Put Credit Spread - 40% BP
 Entry Conditions:
   - Sell a put option with a delta of -0.20
   - Buy a put option with a delta of -0.13
