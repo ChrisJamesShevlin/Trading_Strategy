@@ -17,7 +17,7 @@ Management:
 
 Strategy 2: Iron Condor (High Volatility)
 -----------------------------------------
-Condition: VIX > 1.5 Standard Deviations
+Condition: VIX > 1.5 Standard Deviations + > 20
 Option Type: Iron Condor - 60% BP
 Entry Conditions:
   - Sell a call and a put option both with a delta of -0.16
