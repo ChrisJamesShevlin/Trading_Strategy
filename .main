@@ -9,7 +9,7 @@ Entry Conditions:
 Expiry: Close to 45 DTE
 Management:
   - Hold if > 21 DTE
-  - Take profit at 25% max profit
+  - Take profit at 50% max profit
   - If < 21 DTE and price above breakeven then continue to hold
   - If price then goes outside of breakeven after 21 DTE close
   - If < 21 DTE and price below breakeven then close position
