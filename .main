@@ -1,6 +1,6 @@
 Strategy 1: Put Credit Spread (Low Volatility)
 ---------------------------------------------
-Condition: VIX < 1.5 Standard Deviations
+Condition: VIX < 1.5 Standard Deviations + < 20
 Option Type: Put Credit Spread - 40% BP
 Entry Conditions:
   - Sell a put option with a delta of -0.20
