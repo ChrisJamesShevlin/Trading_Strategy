@@ -1,7 +1,7 @@
 Strategy 1: Put Credit Spread (Low Volatility)
 ---------------------------------------------
 Condition: VIX < 1.5 Standard Deviations + < 20
-Option Type: Put Credit Spread - 40% BP
+Option Type: Put Credit Spread - 5% max loss
 Entry Conditions:
   - Sell a put option with a delta of -0.20
   - Buy a put option with a delta of -0.13
@@ -18,7 +18,7 @@ Management:
 Strategy 2: Iron Condor (High Volatility)
 -----------------------------------------
 Condition: VIX > 1.5 Standard Deviations + > 20
-Option Type: Iron Condor - 60% BP
+Option Type: Iron Condor - 10% max loss
 Entry Conditions:
   - Sell a call and a put option both with a delta of -0.16
   - Buy a call and a put option both with a delta of -0.10
