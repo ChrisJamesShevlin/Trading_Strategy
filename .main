@@ -1,6 +1,7 @@
 # Iron Condor Trading Strategy
 
-This strategy utilizes iron condors in both high and low volatility environments, with specific adjustments for managing risk and optimizing profits. The strategy is divided into two parts: one for high volatility and one for low volatility.
+This strategy utilizes iron condors in both high and low volatility environments, with specific adjustments for managing risk and optimizing profits. The strategy is divided into two parts: one 
+for high volatility and one for low volatility.
 
 ## High Volatility Environment
 
