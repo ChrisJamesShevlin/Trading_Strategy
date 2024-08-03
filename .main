@@ -1,30 +1,53 @@
-Strategy 1: Put Credit Spread (Low Volatility)
----------------------------------------------
-Condition: VIX < 1.5 Standard Deviations + < 20
-Option Type: Put Credit Spread - 5% max loss
-Entry Conditions:
-  - Sell a put option with a delta of -0.20
-  - Buy a put option with a delta of -0.13
+# Iron Condor Trading Strategy
 
-Expiry: Close to 45 DTE
-Management:
-  - Hold if > 21 DTE
-  - Take profit at 50% max profit
-  - If < 21 DTE and price above breakeven then continue to hold
-  - If price then goes outside of breakeven after 21 DTE close
-  - If < 21 DTE and price below breakeven then close position
-  
+This strategy utilizes iron condors in both high and low volatility environments, with specific adjustments for managing risk and optimizing profits. The strategy is divided into two parts: one for high volatility and one for low volatility.
 
-Strategy 2: Iron Condor (High Volatility)
------------------------------------------
-Condition: VIX > 1.5 Standard Deviations + > 20
-Option Type: Iron Condor - 10% max loss
-Entry Conditions:
-  - Sell a call and a put option both with a delta of -0.16
-  - Buy a call and a put option both with a delta of -0.10
-  - Enter when stochastic indicator is oversold and the daily candle is down
-Expiry: Close to 45 DTE
-Management:
-  - Hold if > 21 DTE
-  - Take profit at 25% max profit
-  - Close position if < 21 DTE regardless of profit/loss situation
+## High Volatility Environment
+
+### Criteria:
+- **Market Condition:** High volatility (VIX > 20).
+- **Days to Expiration (DTE):** 45 days.
+- **Wings:** $10 wide (difference between short and long strikes).
+- **Delta for Short Options:** 0.10 for both call and put sides.
+
+### Execution:
+1. **Entry:**
+   - Sell a call and put with a delta of 0.10.
+   - Buy a call and put $10 away from the short strikes to form the iron condor.
+
+2. **Profit Target:**
+   - Close the position when you achieve 40% of the maximum profit.
+
+3. **Rolling the Untested Side:**
+   - If one side is tested and the position has more than 21 DTE, roll the untested side to the same delta (0.10) at the time of the new opening.
+
+4. **21 DTE Decision:**
+   - **If the position is showing a profit:** Close the entire position regardless of whether it has reached the 40% profit target.
+   - **If the position is at a loss:** Roll the entire iron condor out in time to a new expiration (preferably 45 DTE) and adjust the deltas:
+     - Increase the delta of the new short strikes to 0.20 to collect more premium and recover from the loss.
+
+---
+
+## Low Volatility Environment
+
+### Criteria:
+- **Market Condition:** Low volatility (VIX < 20).
+- **Days to Expiration (DTE):** 45 days.
+- **Wings:** $20 wide (difference between short and long strikes).
+- **Delta for Short Options:** 0.16 for both call and put sides.
+
+### Execution:
+1. **Entry:**
+   - Sell a call and put with a delta of 0.16.
+   - Buy a call and put $20 away from the short strikes to form the iron condor.
+
+2. **Profit Target:**
+   - Close the position when you achieve 25% of the maximum profit.
+
+3. **Rolling the Untested Side:**
+   - If one side is tested and the position has more than 21 DTE, roll the untested side to the same delta (0.16) at the time of the new opening.
+
+4. **21 DTE Decision:**
+   - **If the position is showing a profit:** Close the entire position regardless of whether it has reached the 25% profit target.
+   - **If the position is at a loss:** Roll the entire iron condor out in time to a new expiration (preferably 45 DTE) and adjust the deltas:
+     - Increase the delta of the new short strikes to 0.25 to collect more premium and recover from the loss.
