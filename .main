@@ -10,6 +10,7 @@ for high volatility and one for low volatility.
 - **Days to Expiration (DTE):** 45 days.
 - **Wings:** $10 wide (difference between short and long strikes).
 - **Delta for Short Options:** 0.10 for both call and put sides.
+- **5% Max Loss of capital 
 
 ### Execution:
 1. **Entry:**
@@ -36,6 +37,7 @@ for high volatility and one for low volatility.
 - **Days to Expiration (DTE):** 45 days.
 - **Wings:** $20 wide (difference between short and long strikes).
 - **Delta for Short Options:** 0.16 for both call and put sides.
+- **5% Max Loss of capital
 
 ### Execution:
 1. **Entry:**
