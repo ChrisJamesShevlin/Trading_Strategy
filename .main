@@ -2,7 +2,7 @@
 # The Wheel Strategy Rules
 
 ## Step 1: Sell Puts
-Start the Wheel by selling short (naked). Ensure your account has sufficient cash or margin to purchase the shares if assigned.
+Start the Wheel by selling short (naked) puts. Ensure your account has sufficient cash or margin to purchase the shares if assigned.
 
 - **Process:**
   - **Entry:** Sell Puts at 30-45 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
