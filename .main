@@ -17,7 +17,7 @@
   - Immediately close the entire position if the price drops below the strikes of the two short puts.
   - Roll one short put out in time and down to a lower strike, maintaining equal or greater delta.
   - This ensures the new position remains profitable if the market rebounds.
-- **If Price Drops Below the Rolled Put:**
+1a- **If Price Drops Below the Rolled Put:**
   - Close the rolled short put.
   - Purchase SPX (or an equivalent ETF) for an equal or greater contract size.
   - Hold this position until the market recovers.
@@ -29,5 +29,4 @@
 - **At 7 DTE:**
   - **If Market Rallies and Position Becomes Profitable:** Close the remaining short put to secure profits.
   - **If Market Drops Below the Short Put or Remains Unprofitable:**
-    - Roll the short put out in time and down to a lower strike, following the same rules as above:
-      - Adjust for equal or greater delta to ensure a profitable position if the market rebounds.
+  - **Roll the short put out in time and down to a lower strike, following the same rules as 1a
