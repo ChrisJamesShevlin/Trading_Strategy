@@ -5,7 +5,7 @@
 Start the Wheel by selling short (naked) puts. Ensure your account has sufficient cash or margin to purchase the shares if assigned.
 
 - **Process:**
-  - **Entry:** Sell Puts at 30-45 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
+  - **Entry:** Sell Puts at >30 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
   - **Risk Management:** Limit risk to 5% of the account per trade, keeping approximately 50% of the account in cash to manage downturns, assignments, and opportunities.
   - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit. 
   - **Rolling:**
