@@ -8,6 +8,7 @@
 ## Trade Management
 
 ### If Price Drops Below the Short Puts:
+-**Take profit around 30-35% of max profit
 - **Close and Roll:**
   - Immediately close the entire position if the price drops below the strikes of the two short puts.
   - Roll one short put out in time and down to a lower strike, maintaining equal or greater delta.
