@@ -1,20 +1,28 @@
+
 # The Wheel Strategy Rules
 
-## Step 2: Sell Puts
-Start the Wheel by selling short (naked) Puts or Cash Secured Puts (CSPs). Ensure your account has sufficient cash or margin to purchase the shares if assigned.
+## Step 1: Sell Puts
+Start the Wheel by selling short (naked). Ensure your account has sufficient cash or margin to purchase the shares if assigned.
 
 - **Process:**
   - **Entry:** Sell Puts at 30-45 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
   - **Risk Management:** Limit risk to 5% of the account per trade, keeping approximately 50% of the account in cash to manage downturns, assignments, and opportunities.
-  - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit. Continue selling Puts based on your criteria.
-  - **Rolling:** If the Put is challenged, roll out in time and down in strike for a net credit whenever possible. If a net credit is not achievable, allow the Put to expire and take assignment.
+  - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit. 
+  - **Rolling:**
+    - If the Put is challenged (stock price approaches or drops to the strike price), roll out in time by one to two weeks while maintaining the same strike price. This helps to avoid assignment while keeping the trade alive and profitable.
+    - If a more advantageous strike can be rolled to while still collecting a net credit, consider rolling down to that strike.
+    - **Rolling for Credit:** When the stock hits the strike price, the Put option becomes ATM, leading to a rich premium. Rolling at this point can often bring in a large net credit, which helps reduce the net stock cost if assigned or increases overall credit to aid in achieving profit if the stock rebounds.
+    - **Extended Rolling:** If the Put remains ITM, continue rolling out by one or two weeks each time so long as a net credit can be collected. This can be done over several months until the stock recovers, allowing the trade to eventually close for a profit or, at worst, a small loss.
+    - **Additional Short Put:** To "juice" returns, consider selling an additional short put to accelerate the position's recovery. Be prepared for the possibility of another stock assignment and ensure you are comfortable with buying more shares if needed. Another assignment will further lower the net stock cost.
 
-## Step 3: Sell Covered Calls
+  - **Assignment:** If a net credit can no longer be achieved by rolling, allow the Put to expire and accept assignment. 
+
+## Step 2: Sell Covered Calls
 
 ### Process:
-- **Entry:** Sell a Call with 7-10 DTE at or above the net stock cost around .30 delta
+- **Entry:** Sell a Call with 7-10 DTE at or above the net stock cost around .30 delta.
 - **Wait for Opportunity:** If you can't sell a Call at or above the net stock cost, wait until the share price rises.
-- **Exit:** Continue selling Covered Calls until the position is recovered
+- **Exit:** Continue selling Covered Calls until the position is recovered.
 
-## Step 4: Review and Repeat
+## Step 3: Review and Repeat
 After completing Step 3, review your strategy and return to Step 1.
