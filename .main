@@ -17,15 +17,18 @@
 
 ### At 21 DTE:
 - **In Profit:** Close the entire position to lock in gains.
-- **Market Between Strikes (Trade in Loss):**
-  - **Close Long Put & One Short Put:** Reduce risk by closing the long put and one short put.
-  - **Leave Remaining Short Put:** Let it expire, hoping for market recovery.
-    - **If Market Recovers:** Short put expires worthless or with a reduced loss, resulting in an overall profit.
-    - **If Market Does Not Recover:** Implement the strategy below.
+- **In Loss:**
+  - **Close the Position:** Exit the trade by closing both the long put and one of the short puts.
+  - **Roll Remaining Short Put:**
+    - Roll the remaining short put out in time and down to a lower strike.
+    - Adjust the delta and/or contract size to ensure that if the market rallies, the position will be profitable overall.
+  - **If Market Continues to Drop:**
+    - If the market drops below the adjusted short put strike, purchase SPX (or equivalent ETF) for an equal or greater contract size.
+    - Hold the position until the market recovers to manage the drawdown.
 
 ### At Expiry (If Market Doesn’t Recover):
 - **ETF Purchase:**
-  - **If Short Put ITM:** Buy the equivalent ETF (e.g., SPY) matching the contract size of the short put.
+  - **If Short Put ITM:** Buy the equivalent ETF (e.g., SPY) matching or exceeding the contract size of the short put.
   - **Handling Drawdown:**
     - **Wait for Market Recovery:** Hold the ETF, accepting drawdown until recovery.
-    - **Add to Position:** If market continues to decline but recovery is likely, consider adding to the position to lower the average cost basis and potentially shorten the drawdown period.
+    - **Add to Position:** If the market continues to decline but recovery is likely, consider adding to the position to lower the average cost basis and potentially shorten the drawdown period.
