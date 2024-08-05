@@ -7,7 +7,7 @@
 
 ## Trade Management
 -**Take profit around 30-35% of max profit
--**If Price Drops Below the Short Puts:
+-**If Price tests the Short Puts:
   - Close and Roll:
   - Immediately close the entire position if the price drops below the strikes of the two short puts.
   - Roll one short put out in time and down to a lower strike, maintaining equal or greater delta.
@@ -23,6 +23,6 @@
   - Close the long put and one of the short puts, leaving one short put open until 7 DTE.
 - **At 7 DTE:**
   - **If Market Rallies and Position Becomes Profitable:** Close the remaining short put to secure profits.
-  - **If Market Drops Below the Short Put or Remains Unprofitable:**
+  - **If Market tests Put or Remains Unprofitable:**
     - Roll the short put out in time and down to a lower strike, following the same rules as above:
       - Adjust for equal or greater delta to ensure a profitable position if the market rebounds.
