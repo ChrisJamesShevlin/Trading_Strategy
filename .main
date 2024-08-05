@@ -1,33 +1,20 @@
-# Put Ratio Spread Trading Strategy
+# The Wheel Strategy Rules
 
-## Trade Setup
-- **Long Put:** Buy a put with a delta of -0.40.
-- **Short Puts:** Sell two puts with deltas around -0.25 each, ensuring you collect an overall profit at expiry.
-- **Duration:** Initiate the trade with approximately 30-45 days to expiration (DTE).
+## Step 2: Sell Puts
+Start the Wheel by selling short (naked) Puts or Cash Secured Puts (CSPs). Ensure your account has sufficient cash or margin to purchase the shares if assigned.
 
-## Take Profit
-- **Target Profit:** Close the entire position when you achieve 50% of the maximum profit.
+- **Process:**
+  - **Entry:** Sell Puts at 30-45 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
+  - **Risk Management:** Limit risk to 5% of the account per trade, keeping approximately 50% of the account in cash to manage downturns, assignments, and opportunities.
+  - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit. Continue selling Puts based on your criteria.
+  - **Rolling:** If the Put is challenged, roll out in time and down in strike for a net credit whenever possible. If a net credit is not achievable, allow the Put to expire and take assignment.
 
-## Trade Management
+## Step 3: Sell Covered Calls
 
-### If Short Puts are Tested
-1. **Close and Roll:**
-   - **Close:** Close the long put and one of the short puts.
-   - **Roll:** Roll the remaining short put down (if above 21 DTE). Ensure this rolled put will still achieve a profit for the entire trade overall if the market rebounds.
+### Process:
+- **Entry:** Sell a Call with 7-10 DTE at or above the net stock cost around .30 delta
+- **Wait for Opportunity:** If you can't sell a Call at or above the net stock cost, wait until the share price rises.
+- **Exit:** Continue selling Covered Calls until the position is recovered
 
-### If Less than 21 DTE and the Trade is Still in Loss
-1. **Roll Strategy:**
-   - **Roll the Short Put:** Roll the remaining short put out in time and down to a lower strike.
-   - **Profit Check:** Ensure the new rolled put will still achieve a profit for the entire trade overall.
-   - **Repeat:** Continue rolling the short put as necessary until you can no longer roll for sufficient profit without increasing contract size.
-
-### If You Can No Longer Roll for Sufficient Profit
-1. **Purchase the Underlying:**
-   - **Buy Underlying:** Purchase the underlying asset (SPX or equivalent ETF) for an equal or greater contract size.
-   - **Sell Call:** Sell a call option with a delta of around +0.30, ideally with a shorter-term expiration (10-14 DTE). If necessary, choose a longer DTE.
-
-## Key Points
-- **Profit Target:** Take profits early when 30-35% of max profit is achieved.
-- **Rolling Considerations:** Roll the position to adjust strikes and manage risk while maintaining overall profitability.
-- **Underlying Purchase:** Transition to purchasing the underlying and selling calls if rolling is no longer viable without increasing contract size.
-
+## Step 4: Review and Repeat
+After completing Step 3, review your strategy and return to Step 1.
