@@ -24,8 +24,8 @@ Start the Wheel by selling short (naked) puts. Ensure your account has sufficien
 ## Step 2: Sell Covered Calls
 
 ### Process:
-- **Entry:** Sell a Call with 7-10 DTE at or above the net stock cost around .30 delta.
-- **Wait for Opportunity:** If you can't sell a Call at or above the net stock cost, wait until the share price rises.
+- **Entry:** Sell a Call with 7-10 DTE at or above the old put level
+- **Wait for Opportunity:** If you can't sell a Call at or above the old put level wait until the share price rises.
 - **Exit:** Continue selling Covered Calls until the position is recovered.
 
 ## Step 3: Review and Repeat
