@@ -12,23 +12,22 @@
 
 ## Trade Management
 
-### Before 21 DTE:
-- **Profit-Taking:** Close the position when 35% of max profit is achieved.
+### If Price Drops Below the Short Puts:
+- **Close and Roll:**
+  - Immediately close the entire position if the price drops below the strikes of the two short puts.
+  - Roll one short put out in time and down to a lower strike, maintaining equal or greater delta.
+  - This ensures the new position remains profitable if the market rebounds.
+- **If Price Drops Below the Rolled Put:**
+  - Close the rolled short put.
+  - Purchase SPX (or an equivalent ETF) for an equal or greater contract size.
+  - Hold this position until the market recovers.
 
 ### At 21 DTE:
-- **In Profit:** Close the entire position to lock in gains.
-- **In Loss:**
-  - **Close the Position:** Exit the trade by closing both the long put and one of the short puts.
-  - **Roll Remaining Short Put:**
-    - Roll the remaining short put out in time and down to a lower strike.
-    - Adjust the delta and/or contract size to ensure that if the market rallies, the position will be profitable overall.
-  - **If Market Continues to Drop:**
-    - If the market drops below the adjusted short put strike, purchase SPX (or equivalent ETF) for an equal or greater contract size.
-    - Hold the position until the market recovers to manage the drawdown.
-
-### At Expiry (If Market Doesn’t Recover):
-- **ETF Purchase:**
-  - **If Short Put ITM:** Buy the equivalent ETF (e.g., SPY) matching or exceeding the contract size of the short put.
-  - **Handling Drawdown:**
-    - **Wait for Market Recovery:** Hold the ETF, accepting drawdown until recovery.
-    - **Add to Position:** If the market continues to decline but recovery is likely, consider adding to the position to lower the average cost basis and potentially shorten the drawdown period.
+- **If in Profit:** Close the entire position to lock in gains.
+- **If in Loss and Price Between Strikes:**
+  - Close the long put and one of the short puts, leaving one short put open until 7 DTE.
+- **At 7 DTE:**
+  - **If Market Rallies and Position Becomes Profitable:** Close the remaining short put to secure profits.
+  - **If Market Drops Below the Short Put or Remains Unprofitable:**
+    - Roll the short put out in time and down to a lower strike, following the same rules as above:
+      - Adjust for equal or greater delta to ensure a profitable position if the market rebounds.
