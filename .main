@@ -6,11 +6,9 @@
 - **Rationale:** This setup allows for premium collection while providing downside protection, with the goal of creating a credit trade that benefits from moderate market declines.
 
 ## Trade Management
-
-
 -**Take profit around 30-35% of max profit
-### If Price Drops Below the Short Puts:
-- **Close and Roll:**
+-**If Price Drops Below the Short Puts:
+  - Close and Roll:
   - Immediately close the entire position if the price drops below the strikes of the two short puts.
   - Roll one short put out in time and down to a lower strike, maintaining equal or greater delta.
   - This adjustment ensures the new position remains profitable if the market rebounds.
