@@ -1,32 +1,12 @@
-
-# The Wheel Strategy Rules
-
-## Step 1: Sell Puts
-Start the Wheel by selling short (naked) puts. Ensure your account has sufficient cash or margin to purchase the shares if assigned.
-
 - **Process:**
   - **Entry:** Sell Puts at >30 DTE for optimal premium, targeting a 50% probability of being out-of-the-money (≈ 0.30 Delta).
   - **Risk Management:** Limit risk to 5% of the account per trade, keeping approximately 50% of the account in cash to manage downturns, assignments, and opportunities.
-  - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit. 
-  - **Rolling:**
-    - If the Put is challenged (stock price approaches or drops to the strike price), roll out in time by one to two weeks while maintaining the same strike price. This helps to avoid 
-      assignment while keeping the trade alive and profitable.
-    - If a more advantageous strike can be rolled to while still collecting a net credit, consider rolling down to that strike.
-    - **Rolling for Credit:** When the stock hits the strike price, the Put option becomes ATM, leading to a rich premium. Rolling at this point can often bring in a large net credit, 
-      which helps reduce the net stock cost if assigned or increases overall credit to aid in achieving profit if the stock rebounds.
-    - **Extended Rolling:** If the Put remains ITM, continue rolling out by one or two weeks each time so long as a net credit can be collected. This can be done over several months 
-      until the stock recovers, allowing the trade to eventually close for a profit or, at worst, a small loss.
-    - **Additional Short Put:** To "juice" returns, consider selling an additional short put to accelerate the position's recovery. Be prepared for the possibility of another stock assignment 
-      and ensure you are comfortable with buying more shares if needed. Another assignment will further lower the net stock cost.
+  - **Profit-Taking:** Set a GTC (Good 'Til Canceled) Limit Order to close the Put at 50% profit.
+  - **Rolling Management:**
+    - **Roll Down if Tested and Time Allows:** If the put is tested (stock price approaches or drops to the strike price) and the option has more than 21 days until expiration (DTE), roll down to a lower strike price while maintaining the same expiration, provided this roll generates a net credit.
+    - **Roll Out and Adjust to Short Straddle Near Expiration:** If the put is tested and there are 21 DTE or fewer, roll the position out in time by one to two weeks. Simultaneously, sell a call at the same strike as the put, converting the position into a short straddle. This ensures that the premium collected will be enough to cover any potential losses.
+    - **Consider Inverted Roll if Price Continues to Fall:** If the stock price continues to fall after establishing the short straddle, consider rolling to an inverted position (where the call strike is below the put strike) to maintain a net credit and manage risk. This inversion strategy is aimed at collecting enough premium to reduce or eliminate losses.
 
-  - **Assignment:** If a net credit can no longer be achieved by rolling, allow the Put to expire and accept assignment. 
 
-## Step 2: Sell Covered Calls
-
-### Process:
-- **Entry:** Sell a Call with 7-10 DTE but consider longer if you can't sell a call at or above the old put level
-- **Wait for Opportunity:** If you can't sell a Call at or above the old put level wait until the share price rises.
-- **Exit:** Continue selling Covered Calls until the position is recovered.
-
-## Step 3: Review and Repeat
-After completing Step 3, review your strategy and return to Step 1
+## Step 2: Review and Repeat
+After the put expires or is assigned, review your strategy and return to Step 1.
