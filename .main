@@ -35,8 +35,8 @@
 ### Position Management
 
 #### Profit Target
-- **VIX > 20:** Close the entire strangle when a **40% - 50% profit** is achieved on the position.
-- **VIX < 20:** Close the entire strangle when a **25% - 40% profit** is achieved on the position.
+- **VIX > 20:** Close the entire strangle when a **40% - 60% profit** is achieved on the position.
+- **VIX < 20:** Close the entire strangle when a **20% - 30% profit** is achieved on the position.
 
 #### 21 DTE Management
 - **If the position is in profit** at 21 days to expiration (DTE), close the trade.
