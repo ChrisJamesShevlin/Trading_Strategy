@@ -41,8 +41,7 @@
 #### 21 DTE Management
 - **If the position is in profit** at 21 days to expiration (DTE), close the trade.
 - **If the position is not in profit** at 21 DTE, roll the entire position out to the next expiration cycle.
-- **Margin 60% if Vix > 15 / Margin 40% if Vix < 15**: Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. 
-      This adjustment aims to reset the trade with a balanced risk profile, potentially allowing it to recover and achieve the profit target.
+- **Margin 60% if Vix > 15 / Margin 40% if Vix < 15**: Roll untested side to .20 delta with tested side at same delta level as per Vix level strategy. 
 
 ### Rolling Rules
 
