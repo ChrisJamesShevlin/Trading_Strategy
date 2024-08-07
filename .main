@@ -9,7 +9,7 @@
   - Sell a Put with a delta of approximately **0.16**.
   - Margin 30%
 
-- **When VIX ≤ 20:**
+- **When VIX ≤ 20 & > 15:**
 - **30-45DTE**
   - Sell a Call with a delta of approximately **0.12**.
   - Sell a Put with a delta of approximately **0.12**.
