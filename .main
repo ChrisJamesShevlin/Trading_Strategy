@@ -50,7 +50,7 @@
 
 #### Delta-Based Rolling
 - If the delta of the untested side falls below **0.08**, roll that option to:
-  - **Option 1:** The original delta (0.12 or 0.16 depending on the VIX level).
+  - **Option 1:** The original delta (0.10/ 0.14/ 0.18 depending on the VIX level).
   - **Option 2:** A higher delta (above 0.12 or 0.16) to collect more premium if comfortable with the additional risk.
 
 #### Maximum Adjustment with Profit Close
