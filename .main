@@ -16,7 +16,7 @@ This strategy combines two trading approaches based on VIX levels:
   - Initiate the trade only when the VIX is below 15 and showing signs of further decline.
 
 - **Position Details:**
-  - **Days to Expiration (DTE):** 45 DTE on /ES (E-mini S&P 500 Futures Options).
+  - **Days to Expiration (DTE):** 45 DTE 
   - **Put Debit Spread:**
     - Buy a 30 delta long put.
     - Sell a 28 delta short put.
