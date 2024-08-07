@@ -3,8 +3,8 @@
 #### **1. High Volatility Environment (VIX > 20)**
    - **30-45 DTE:**
      - **Strategy:**
-       - **Sell a Call** with a delta of approximately **0.16**.
-       - **Sell a Put** with a delta of approximately **0.16**.
+       - **Sell a Call** with a delta of approximately **0.18**.
+       - **Sell a Put** with a delta of approximately **0.18**.
        - **Margin**: **50%**
      - **Rationale:** With the VIX above 20, higher volatility is expected, so a slightly more aggressive delta is chosen to capture greater premium within the 30-45 DTE window, 
          which balances time decay and risk.
@@ -21,16 +21,16 @@
 #### **3. Low Volatility Environment (VIX < 15)**
    - **>60 DTE:**
      - **Strategy:**
-       - **Sell a Call** with a delta of approximately **0.12**.
-       - **Sell a Put** with a delta of approximately **0.12**.
+       - **Sell a Call** with a delta of approximately **0.10**.
+       - **Sell a Put** with a delta of approximately **0.10**.
        - **Margin**: **30%**
      - **Rationale:** In a low volatility environment, with the VIX below 15, a more conservative delta is appropriate. The extended DTE (>60 days) allows you to take advantage of time 
          decay while minimizing risk due to the stable market conditions.
 
 ### Summary
-- **VIX > 20 (30-45 DTE):** Aggressive delta (0.16) to capitalize on high premiums due to increased volatility.
+- **VIX > 20 (30-45 DTE):** Aggressive delta (0.18) to capitalize on high premiums due to increased volatility.
 - **VIX 15-20 (30-45 DTE):** Balanced delta (0.14) to match moderate volatility expectations.
-- **VIX < 15 (>60 DTE):** Conservative delta (0.12) with longer expiration to leverage time decay in a low-volatility environment.
+- **VIX < 15 (>60 DTE):** Conservative delta (0.10) with longer expiration to leverage time decay in a low-volatility environment.
 
 ### Position Management
 
