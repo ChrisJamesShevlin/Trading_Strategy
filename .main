@@ -14,7 +14,7 @@ This strategy focuses on using a short strangle with adjustments based on VIX le
     - Sell a Call with a delta of approximately **0.16**.
     - Sell a Put with a delta of approximately **0.16**.
     - Margin 30%
-  
+  - **>60 DTE**
   - **When VIX ≤ 15 and elevated SD:**
     - Sell a Call with a delta of approximately **0.12**.
     - Sell a Put with a delta of approximately **0.12**.
@@ -29,7 +29,8 @@ This strategy focuses on using a short strangle with adjustments based on VIX le
 #### 21 DTE Management
 - **If the position is in profit** at 21 days to expiration (DTE), close the trade.
 - **If the position is not in profit** at 21 DTE, roll the entire position out to the next expiration cycle.
-  - **Margin 60%**: Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. This adjustment aims to reset the trade with a balanced risk profile, potentially allowing it to recover and achieve the profit target.
+  - **Margin 60%**: Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. This adjustment aims to reset the trade with a balanced 
+      risk profile, potentially allowing it to recover and achieve the profit target.
 
 ### Rolling Rules
 
