@@ -55,4 +55,5 @@
 
 #### Maximum Adjustment with Profit Close
 - If rolling the untested side would bring the strikes to the point where the position becomes a **straddle** (i.e., the call and put strikes are the same), and the overall position is in profit, 
-  - **close the position** rather than rolling. This prevents taking on excessive risk by avoiding an inversion while locking in profits.
+  - **close the position** rather than rolling. This prevents taking on excessive risk by avoiding an inversion while locking in profits. 
+  - **If the position is still in a loss roll out following the 21 DTE Management section.
