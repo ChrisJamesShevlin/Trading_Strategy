@@ -4,12 +4,12 @@
 
 ### VIX-Based Delta Selection:
 - **30-45DTE**
-- **When VIX > 20:**
+- **When VIX > 20 rising volatility based on SD:**
   - Sell a Call with a delta of approximately **0.16**.
   - Sell a Put with a delta of approximately **0.16**.
   - Margin 30%
 
-- **When VIX ≤ 20 & > 15:**
+- **When VIX ≤ 20 & > 15 rising or high volatility based on SD:**
 - **30-45DTE**
   - Sell a Call with a delta of approximately **0.12**.
   - Sell a Put with a delta of approximately **0.12**.
