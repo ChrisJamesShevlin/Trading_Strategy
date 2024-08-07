@@ -1,83 +1,46 @@
-# Combined Trading Strategy: 111 Plan & Short Strangle with VIX-Based Delta Adjustment
+# Combined Trading Strategy: Short Strangle with VIX-Based Delta Adjustment
 
-## Overview:
+## Overview
 
-This strategy combines two trading approaches based on VIX levels:
-1. **111 Trading Plan**: A put debit spread strategy with additional short puts, activated when VIX is below 15 and falling.
-2. **Short Strangle Strategy**: A strangle option strategy adjusted based on VIX levels, applied when the VIX is above 15.
+This strategy focuses on using a short strangle with adjustments based on VIX levels. The approach is applied when the VIX is above 15, adjusting the delta and risk management as volatility changes.
 
-## 1. 111 Trading Plan (VIX < 15 and Falling)
+## Short Strangle Strategy with VIX-Based Delta Adjustment
 
-### Market Condition:
-- **VIX Condition:** Apply this strategy when the VIX is less than 15 and trending downwards.
+### Setup
 
-### Strategy:
-- **Entry Criteria:**
-  - Initiate the trade only when the VIX is below 15 and showing signs of further decline.
-
-- **Position Details:**
-  - **Days to Expiration (DTE):** 45 DTE 
-  - **Put Debit Spread:**
-    - Buy a 30 delta long put.
-    - Sell a 28 delta short put.
-  - **Short Puts:**
-    - Sell a 10 delta short put.
-
-- **Profit Target:**
-  - **Take Profit:** Close the .10 delta short put when you achieve a 90% and leave debit spread to expiry
-
-- **Risk Management:**
-  - **Stop Loss:** Not applicable unless the price closes below BB
-  - **Switch to Srangles**
-   
-
-### Additional Considerations:
-- **Trend Confirmation:** Ensure the market is trending or stable when VIX is falling. Avoid initiating this strategy in a highly volatile market, even if VIX is low.
-- **Monitoring:** Continuously monitor the VIX. If VIX begins to rise, reconsider the position or adjust accordingly.
-
----
-
-## 2. Short Strangle Strategy with VIX-Based Delta Adjustment
-
-### Setup:
-
-#### VIX-Based Delta Selection:
+#### VIX-Based Delta Selection
 - **30-45 DTE**
   - **When VIX > 20 and elevated SD:**
     - Sell a Call with a delta of approximately **0.16**.
     - Sell a Put with a delta of approximately **0.16**.
     - Margin 30%
   
-  - **When VIX ≤ 20 & > 15 and elevated SD:**
+  - **When VIX ≤ 15 and elevated SD:**
     - Sell a Call with a delta of approximately **0.12**.
     - Sell a Put with a delta of approximately **0.12**.
     - Margin 50%
 
-### Position Management:
+### Position Management
 
-#### Profit Target:
+#### Profit Target
 - **VIX > 20:** Close the entire strangle when a **40% - 50% profit** is achieved on the position.
-- **VIX < 20:** Close the entire strangle when a **25% - 40% profit** is achieved on the position.
+- **VIX < 15:** Close the entire strangle when a **25% - 40% profit** is achieved on the position.
 
-#### 21 DTE Management:
+#### 21 DTE Management
 - **If the position is in profit** at 21 days to expiration (DTE), close the trade.
 - **If the position is not in profit** at 21 DTE, roll the entire position out to the next expiration cycle.
-  - **Margin 60%**: Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. This adjustment aims to reset the trade 
-      with a balanced risk profile, potentially allowing it to recover and achieve the profit target.
+  - **Margin 60%**: Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. This adjustment aims to reset the trade with a balanced risk profile, potentially allowing it to recover and achieve the profit target.
 
-### Rolling Rules:
+### Rolling Rules
 
-#### Only Roll the Untested Side:
+#### Only Roll the Untested Side
 - If one side of the strangle (call or put) becomes "untested" (price moves away from this side, reducing delta), consider rolling that side to maintain the balance of the trade.
 
-#### Delta-Based Rolling:
+#### Delta-Based Rolling
 - If the delta of the untested side falls below **0.08**, roll that option to:
   - **Option 1:** The original delta (0.12 or 0.16 depending on the VIX level).
   - **Option 2:** A higher delta (above 0.12 or 0.16) to collect more premium if comfortable with the additional risk.
 
-#### Maximum Adjustment with Profit Close:
+#### Maximum Adjustment with Profit Close
 - If rolling the untested side would bring the strikes to the point where the position becomes a **straddle** (i.e., the call and put strikes are the same), and the overall position is in profit, 
   - **close the position** rather than rolling. This prevents taking on excessive risk by avoiding an inversion while locking in profits.
-
-
-
