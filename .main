@@ -6,20 +6,23 @@
 - **When VIX > 20:**
   - Sell a Call with a delta of approximately **0.12**.
   - Sell a Put with a delta of approximately **0.12**.
+  - Margin 30%
 
 - **When VIX ≤ 20:**
   - Sell a Call with a delta of approximately **0.16**.
   - Sell a Put with a delta of approximately **0.16**.
+  - Margin 50%
 
 ## Position Management:
 
 ### Profit Target:
 - Close the entire strangle when a **50% profit** is achieved on the position when VIX is > 20
-- Close the entire strangle when a **25% profit** is achieved on the position when VIX is < 20
+- Close the entire strangle when a **25% - 40% profit** is achieved on the position when VIX is < 20
 
 ### 21 DTE Management:
 - **If the position is in profit** at 21 days to expiration (DTE), close the trade.
-- **If the position is not in profit** at 21 DTE, roll the entire position out to the next expiration cycle:
+- **If the position is not in profit** at 21 DTE, roll the entire position out to the next expiration cycle
+- **Margin 60%
   - Adjust both the call and the put to have a **0.20 delta** in the new expiration cycle, regardless of the VIX level. This adjustment aims to reset the trade with a balanced risk profile, 
     potentially allowing it to recover and achieve the profit target.
 
