@@ -19,13 +19,20 @@
          volatility-induced risks.
 
 #### **3. Low Volatility Environment (VIX < 15)**
-   - **>60 DTE:**
-     - **Strategy:**
-       - **Sell a Call** with a delta of approximately **0.10**.
-       - **Sell a Put** with a delta of approximately **0.10**.
-       - **Margin**: **30%**
-     - **Rationale:** In a low volatility environment, with the VIX below 15, a more conservative delta is appropriate. The extended DTE (>60 days) allows you to take advantage of time 
-         decay while minimizing risk due to the stable market conditions.
+
+# OTM Call Calendar Spread Strategy
+## 1. Set Up the Position
+- **Strike Price:** Select an OTM strike price with a delta of approximately 0.30.
+- **Short Call:** Sell 1 call option with 30-45 days to expiration (DTE) at the chosen strike price.
+- **Long Call:** Buy 1 call option with 60-90 days to expiration (DTE) at the same strike price.
+- **Margin**: **30%**
+
+## 2. Set Profit Target
+- **Target Profit:** Aim to close the position when the value of the spread reaches 25% above the initial net debit.
+
+## 3. Risk Management
+- **Do Not Roll:** Do not roll the position or partially close it. Exit the entire position based on the profit target or leave to expire with defined risk
+
 
 ### Summary
 - **VIX > 20 (30-45 DTE):** Aggressive delta (0.18) to capitalize on high premiums due to increased volatility.
